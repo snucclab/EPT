@@ -1,0 +1,36 @@
+{
+  "batch": 2048,
+  "seed": 1,
+  "fix_encoder_embedding": true,
+  "lr_multiplier_encoder": 1.0,
+  "gradient": {
+    "accumulation_steps": 2,
+    "clip": 10.0,
+    "normalize": false
+  },
+  "epoch": {
+    "total": 0,
+    "warmup": 0,
+    "chkpt": 0,
+    "report": 0
+  },
+  "model": {
+    "encoder_model": "albert-large-v2",
+    "chkpt_path": null,
+    "model_type": "ept",
+    "num_decoder_layers": 6,
+    "num_pointer_heads": 1,
+    "beam_size": 3
+  },
+  "optimizer": {
+    "lr": 0.0,
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "clamp_value": 10.0,
+    "adam": false,
+    "debias": true,
+    "optimizer": "lamb",
+    "beta1": 0.9,
+    "beta2": 0.999
+  }
+}
