@@ -106,6 +106,10 @@ if __name__ == '__main__':
     args = parse_argument()
     sampling_space, perturb_space = parse_option_space(args)
 
+    run_dir = Path('runs')
+    if not run_dir.exists():
+        run_dir.mkdir(parents=True)
+
     # Compute the number of devices per trial
     gpus = get_available_device_count(default=0)
     cpus = int(cpu_count() * 0.75)
